@@ -10,7 +10,7 @@
 
 ***服务器与多个客户端收发数据***
 
-<img src="C:\Users\29848\AppData\Roaming\Typora\typora-user-images\image-20230204145315773.png" alt="image-20230204145315773" style="zoom: 67%;" />
+<img src="C:\Users\29848\Desktop\文件\note\网络编程\TCP编程\assets\image-20230204145315773.png" alt="image-20230204145315773" style="zoom: 67%;" />
 
 - sever程序需要绑定一个端口，ip可以任意，如果不绑定(bind)，端口将随机分配，这样客户端就无法知道服务器端口
 - sever程序调用listen函数时会进入listen状态，accept建立连接时，会另返回一个套接字用于收发数据，最初创建的套接字一直是listen状态用于监听

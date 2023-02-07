@@ -8,7 +8,7 @@
 
 ***服务器与多个客户端收发数据***
 
-<img src="C:\Users\29848\AppData\Roaming\Typora\typora-user-images\image-20230204165218196.png" alt="image-20230204165218196" style="zoom:67%;" />
+<img src="C:\Users\29848\Desktop\文件\note\网络编程\UDP编程\assets\image-20230204165218196.png" alt="image-20230204165218196" style="zoom:67%;" />
 
 - 服务器和客户端没有区别，只要知道ip和端口就可以直接发数据
 - 通常服务器绑定端口，否则客户端不知道服务器端口号
