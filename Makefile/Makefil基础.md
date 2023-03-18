@@ -19,7 +19,7 @@ b.o: b.c
 	gcc -c -o b.o b.c
 ```
 
-***执行make命令，默认生成第一个目标，每次执行时，都检查是否需要重新生成依赖***
+***执行 make 命令时，它会去当前目录下查找名为“Makefile”的文件，并 根据它的指示去执行操作，生成第一个目标。每次执行时，都检查是否需要重新生成依赖***
 
 ***当文件很多时，不能逐一写出所有文件，而需要使用通配符%***
 
@@ -252,7 +252,7 @@ clean:
 
 - gcc -M c.c					            打印出依赖
 - gcc -M -MF c.d c.c                  把依赖文件写入c.d
-- gcc -c -o c.o c.c -MD -MF c.d 编译c.o,把依赖写入c.d
+- gcc -c -o c.o c.c -MD -MF c.d 编译c.c,把依赖写入c.d
 
 ```makefile
 objs = a.o b.o c.o
@@ -291,4 +291,3 @@ CFLAGS = -Werror -I include    #CFLAGS是一个约定俗称的变量，当然可
 %.o : %.c
 	gcc $(CFLAGS) -c -o $@ $< -MD -MF .$@.d
 ```
-
