@@ -1,0 +1,173 @@
+{
+  "main": {
+    "id": "44dbca26296df2a4",
+    "type": "split",
+    "children": [
+      {
+        "id": "e094913e1724b3f3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0a2582c82fe39762",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "gdb调试/gdb调试入门.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ba3ccf104c0ec075",
+    "type": "split",
+    "children": [
+      {
+        "id": "6fbd16190b5b9187",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d01fb28b48d40546",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f6577a2448d60784",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "68fe935248f2b7f8",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "f68ffdf05f66d9c0",
+    "type": "split",
+    "children": [
+      {
+        "id": "d771b3d5095f5751",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d743eff633c6e631",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "gdb调试/gdb调试入门.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "7eae1fc93c032025",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "gdb调试/gdb调试入门.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "a24a42bc035f6ca1",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "1706c3274fff6ced",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "gdb调试/gdb调试入门.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "0a2582c82fe39762",
+  "lastOpenFiles": [
+    "git使用/git的使用.md",
+    "Makefile/Makefil基础.md",
+    "数据结构与算法基础/环形缓冲区/环形缓冲区.md",
+    "gdb调试/gdb调试入门.md",
+    "cmake/cmake.md",
+    "网络编程/UDP编程/UDP.md",
+    "网络编程/UDP编程/UDP.pdf",
+    "网络编程/TCP编程/TCP.md",
+    "计算机系统基础/计算机系统基础.md",
+    "Makefile/通用Makefle的解析.md",
+    "Makefile/通用Makefle的解析.pdf",
+    "gdb调试/gdb调试入门.pdf",
+    "网络编程/TCP编程/assets/image-20230204145315773-16757775569771.png",
+    "数据结构与算法基础/环形缓冲区/环形缓冲区.pdf",
+    "计算机系统基础/计算机系统基础.pdf",
+    "README.md",
+    "2023-08-01.md",
+    "网络编程/UDP编程/assets/image-20230204165218196-16757776007941.png",
+    "数据结构与算法基础/环形缓冲区/assets/image-20230207213125308-16757774156121.png",
+    "网络编程/TCP编程/TCP.pdf"
+  ]
+}
