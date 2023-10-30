@@ -8,13 +8,13 @@
         "type": "tabs",
         "children": [
           {
-            "id": "0a2582c82fe39762",
+            "id": "75ae9b496c331626",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "gdb调试/gdb调试入门.md",
-                "mode": "preview",
+                "file": "ARM/状态寄存器位标志.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#网络编程",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "gdb调试/gdb调试入门.md",
+                "file": "ARM/状态寄存器位标志.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "gdb调试/gdb调试入门.md",
+                "file": "ARM/状态寄存器位标志.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -115,7 +115,7 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
+                "useHierarchy": false
               }
             }
           },
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "gdb调试/gdb调试入门.md"
+                "file": "ARM/状态寄存器位标志.md"
               }
             }
           }
@@ -147,24 +147,26 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "0a2582c82fe39762",
+  "active": "75ae9b496c331626",
   "lastOpenFiles": [
-    "git使用/git的使用.md",
-    "Makefile/Makefil基础.md",
-    "数据结构与算法基础/环形缓冲区/环形缓冲区.md",
-    "gdb调试/gdb调试入门.md",
-    "cmake/cmake.md",
-    "网络编程/UDP编程/UDP.md",
-    "网络编程/UDP编程/UDP.pdf",
-    "网络编程/TCP编程/TCP.md",
-    "计算机系统基础/计算机系统基础.md",
+    "数据结构与算法基础/环形缓冲区/环形缓冲区.pdf",
+    "未命名.canvas",
     "Makefile/通用Makefle的解析.md",
+    "Makefile/Makefil基础.md",
     "Makefile/通用Makefle的解析.pdf",
+    "网络编程/TCP编程/TCP.md",
+    "网络编程/UDP编程/UDP.md",
+    "cmake/cmake.md",
+    "git使用/git的使用.md",
+    "计算机系统基础/计算机系统基础.md",
+    "计算机系统基础/计算机系统基础.pdf",
+    "未命名.md",
+    "README.md",
+    "gdb调试/gdb调试入门.md",
+    "网络编程/UDP编程/UDP.pdf",
+    "数据结构与算法基础/环形缓冲区/环形缓冲区.md",
     "gdb调试/gdb调试入门.pdf",
     "网络编程/TCP编程/assets/image-20230204145315773-16757775569771.png",
-    "数据结构与算法基础/环形缓冲区/环形缓冲区.pdf",
-    "计算机系统基础/计算机系统基础.pdf",
-    "README.md",
     "2023-08-01.md",
     "网络编程/UDP编程/assets/image-20230204165218196-16757776007941.png",
     "数据结构与算法基础/环形缓冲区/assets/image-20230207213125308-16757774156121.png",
