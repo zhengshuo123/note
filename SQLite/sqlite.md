@@ -1,46 +1,71 @@
-好嘞 👍，我帮你整理一份 **《SQLite 基础速查表》**，一页纸就能涵盖你目前用得到的内容。
-
-------
-
 # 📑 SQLite 基础速查表
+
+---
 
 ## 🚀 启动 & 退出
 
 ```bash
-sqlite3 demo.db        -- 打开或新建 demo.db 数据库
-.exit                  -- 退出
-.quit                  -- 退出
-Ctrl+D / Ctrl+Z+回车    -- 快捷键退出
+sqlite3 demo.db        -- 打开或新建 demo.db
 ```
 
-------
+进入后：
+
+```sql
+.exit
+.quit
+```
+
+快捷键：
+
+* Linux / macOS → `Ctrl + D`
+* Windows → `Ctrl + Z` 再回车
+
+---
+
+## 📂 查看当前连接的是哪个数据库（非常重要）
+
+```sql
+.databases
+```
+
+避免“表怎么没了”的第一神技。
+
+---
+
+---
 
 ## 🏗️ 表操作
 
 ```sql
-CREATE TABLE 表名 (
+CREATE TABLE students (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   name TEXT NOT NULL,
   age INTEGER,
   created_at TEXT DEFAULT (datetime('now'))
 );
-
-.tables                 -- 查看所有表
-.schema 表名            -- 查看表结构
 ```
 
-------
+```sql
+.tables              -- 所有表
+.schema students     -- 建表语句
+```
+
+---
+
+---
 
 ## ✍️ CRUD 基本操作
 
-### C – 插入数据
+### C – 插入
 
 ```sql
 INSERT INTO students (name, age) VALUES ('Alice', 20);
 INSERT INTO students (name, age) VALUES ('Bob', 22);
 ```
 
-### R – 查询数据
+---
+
+### R – 查询
 
 ```sql
 SELECT * FROM students;
@@ -49,70 +74,152 @@ SELECT * FROM students ORDER BY age DESC;
 SELECT * FROM students LIMIT 3;
 ```
 
-### U – 更新数据
+---
+
+### U – 更新
 
 ```sql
 UPDATE students SET age = 21 WHERE name = 'Alice';
-UPDATE students SET name = 'Bobby', age = 23 WHERE id = 2;
 ```
 
-⚠️ 忘记写 `WHERE` 会更新整张表！
+⚠️ **没有 WHERE = 全表更新**
 
-### D – 删除数据
+---
+
+### D – 删除
 
 ```sql
 DELETE FROM students WHERE id = 3;
-DELETE FROM students;       -- 清空表（危险）
-DROP TABLE students;        -- 删除表（结构也没了）
 ```
 
-------
+```sql
+DELETE FROM students;   -- 清空数据（保留表）
+```
+
+```sql
+DROP TABLE students;    -- 表和数据一起删除
+```
+
+---
+
+---
 
 ## 🔍 查询进阶
 
 ```sql
-SELECT COUNT(*) FROM students;           -- 统计行数
-SELECT AVG(age) FROM students;           -- 平均年龄
-SELECT age, COUNT(*) FROM students
-  GROUP BY age;                          -- 分组统计
-SELECT * FROM students WHERE name LIKE '%li%';   -- 模糊查询
+SELECT COUNT(*) FROM students;
+SELECT AVG(age) FROM students;
+
+SELECT age, COUNT(*)
+FROM students
+GROUP BY age;
+
+SELECT * FROM students WHERE name LIKE '%li%';
 ```
 
-------
+---
 
-## 📤 导入 & 导出
+---
+
+## 🔒 事务（防止手滑 & 提高性能）
+
+默认：**每条语句都会自动提交**。
+
+如果你希望：
+
+* 可以反悔
+* 批量操作更快
+
+就手动开启事务：
+
+```sql
+BEGIN;
+
+UPDATE students SET age = age + 1;
+
+-- 检查没问题
+COMMIT;
+
+-- 如果发现错了
+-- ROLLBACK;
+```
+
+---
+
+---
+
+## 📤 导出查询结果（CSV 给 Excel）
+
+推荐用 `.once`（自动恢复输出）：
 
 ```sql
 .headers on
 .mode csv
-.output students.csv
+.once C:\Users\29848\Desktop\students.csv
 SELECT * FROM students;
+```
+
+---
+
+---
+
+## 💾 整库备份（两种）
+
+### ✅ 方式 1：复制成新的 db（最快）
+
+在 sqlite3 里：
+
+```sql
+.backup C:\Users\29848\Desktop\backup.db
+```
+
+---
+
+### ✅ 方式 2：导出为 SQL（可读、可迁移）
+
+### PowerShell：
+
+```powershell
+sqlite3 demo.db ".dump" > backup.sql
+```
+
+### sqlite3 内部：
+
+```sql
+.output C:\Users\29848\Desktop\backup.sql
+.dump
 .output stdout
 ```
 
-👉 导出查询结果到 `students.csv`，可用 Excel 打开。
+---
 
-```sql
-.dump > backup.sql      -- 备份为 SQL 脚本
-sqlite3 new.db < backup.sql   -- 从脚本恢复
+### 恢复：
+
+```powershell
+sqlite3 new.db < backup.sql
 ```
 
-------
+---
 
-## 🖥️ 可读性优化
+---
+
+## 🖥️ 让输出更好看
 
 ```sql
 .headers on
 .mode column
 ```
 
-👉 输出结果对齐、带表头，更好看。
+---
 
-------
+---
 
-## 💡 小贴士
+## 💡 重要经验（比命令更值钱）
 
-- SQLite 数据库就是一个 `.db` 文件，直接复制就是备份。
-- `INTEGER PRIMARY KEY` 就是自增 id，`AUTOINCREMENT` 保证不复用删除过的最大 id。
-- 查询前多用 `SELECT` 验证，再执行 `UPDATE` / `DELETE`。
-- 嵌入式场景尽量保持表结构简单，避免过度设计。
+* 启动 sqlite 时最好**带文件名**
+* 改数据前先用 SELECT 看会影响谁
+* UPDATE / DELETE → 条件反射写 `BEGIN`
+* 找不到表 → 第一件事 `.databases`
+* 做实验数据 → 随时备份
+
+---
